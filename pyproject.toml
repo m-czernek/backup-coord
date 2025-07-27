@@ -1,0 +1,29 @@
+[project]
+name = "backup-coord"
+description = ""
+authors = [
+    {name = "Marek Czernek",email = "marek.czernek@suse.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests",
+]
+version = "1.0.0"
+
+[project.scripts]
+backup-coord = "backup_coord.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "setuptools_scm[toml]",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "backup_coord.__version__"}
