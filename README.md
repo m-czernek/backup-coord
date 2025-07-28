@@ -13,5 +13,5 @@ Build the container locally on the machine where you want to deploy the project:
 git clone https://github.com/m-czernek/backup-coord.git
 cd backup-coord
 containers/build.sh
-podman run -d --name backup-coord localhost/backup-coord
+docker run -d --name backup-coord localhost/backup-coord
 ```

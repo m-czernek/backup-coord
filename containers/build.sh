@@ -8,7 +8,7 @@ fi
 webhook="$1"
 location=$(dirname "$0")
 
-(cd "$location" && podman build -t backup-coord --build-arg=webhook="$webhook" .)
+(cd "$location" && docker build -t backup-coord --build-arg=webhook="$webhook" .)
 
 echo
 echo "To deploy container, run: podman run -d --name backup-coord localhost/backup-coord"
